@@ -1,1 +1,27 @@
+using System;
 
+public class HelloWorld
+{
+    public static int count=2;
+    public static void Main(string[] args)
+    {
+        Console.WriteLine("0");
+        Console.WriteLine("1");
+        fibonacci(0,1);
+        
+    }
+    public static void fibonacci(int num1,int num2){
+        if(count<=18){
+            int newFeb=num1+num2;
+            Console.WriteLine(newFeb);
+            num1=num2;
+            num2=newFeb;
+            count+=1;
+            fibonacci(num1,num2);
+        }
+        else{
+            Environment.Exit(0);
+        }
+        
+    }
+}
