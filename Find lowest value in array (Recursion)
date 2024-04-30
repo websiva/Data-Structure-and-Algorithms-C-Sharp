@@ -1,0 +1,22 @@
+static void Main(string[] args)
+{
+    int[] numbers = new int[] { 5,25,8,9,4,25,10,9,3 };
+    int firstValue = numbers[0];
+    int indexCount = 1;
+    int lowsetValue = FindLowestValue(numbers,firstValue,indexCount);
+    Console.WriteLine($"The Lowest value in the array is:{lowsetValue}");
+
+}
+public static int FindLowestValue(int[] numbers, int firstValue, int indexCount)
+{
+    if(indexCount<numbers.Length)
+    {
+        if (firstValue > numbers[indexCount])
+        {
+            firstValue = numbers[indexCount];
+        }
+        return FindLowestValue(numbers, firstValue, indexCount+1);
+    }
+
+    return firstValue;
+}
