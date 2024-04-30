@@ -1,0 +1,21 @@
+using System;
+
+public class DSA
+{
+    public static void Main(string[] args)
+    {
+        int[] numbers={9,2,10,7,8,6};
+        
+        int num=numbers[0];
+        int index=0;
+        for(int i=1;i<numbers.Length;i++){
+            if(num>numbers[i]){
+                num=numbers[i];
+                index=i;
+            }
+        }
+        
+        Console.WriteLine("The Lowest Value is:"+num+" Index:"+index);
+        
+    }
+}
