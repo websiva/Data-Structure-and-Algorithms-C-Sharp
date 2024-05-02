@@ -1,0 +1,31 @@
+static void Main(string[] args)
+{
+    int[] numbers = new int[] { 5, 8, 9, 4, 25, 10, 19, 3 };
+
+    int[] sortedArray = BubbleSort(numbers);
+
+    for (int i = 0; i < sortedArray.Length; i++)
+    {
+        Console.WriteLine(sortedArray[i]);
+    }
+}
+
+public static int[] BubbleSort(int[] numbers)
+{
+    int noOfValues = numbers.Length;
+    int swapVariable;
+
+    for (int i = 0; i < noOfValues - 1; i++)
+    {
+        for (int j = 0; j < noOfValues - i - 1; j++)
+        {
+            if (numbers[j] > numbers[j + 1])
+            {
+                swapVariable = numbers[j];
+                numbers[j] = numbers[j + 1];
+                numbers[j + 1] = swapVariable;
+            }
+        }
+    }
+    return numbers;
+}
